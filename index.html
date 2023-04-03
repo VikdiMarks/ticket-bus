@@ -11,36 +11,264 @@
 
 <body>
   <header class="box">
-    <a href="./index.html" class="header-logo">
-      <img src="./assets/img/logo.png" alt="">
-    </a>
-    <nav class="header-nav">
-      <ul class="header-nav-links">
-        <li class="header-nav-item">
-          <a href="#">
-            <img src="./assets/img/support.svg" alt="">
-            <span>Служба поддержки</span>
-          </a>
-        </li>
-        <li class="header-nav-item">
-          <a href="./user.html">
-            <img src="./assets/img/user.svg" alt="">
-            <span>Личный кабинет</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <a href="./index.html" class="header-logo">
+        <img src="./assets/img/logo.png" alt="">
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav-links">
+          <li class="header-nav-item drop-menu">
+            <div class="drop-menu-title">
+              <img src="./assets/img/support.svg" alt="">
+              <span>Служба поддержки</span>
+            </div>
+            <ul class="drop-menu-wrapper">
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/social/telegram.svg" alt="">
+                  <span>Telegram</span>
+                </a>
+              </li>
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/social/whatsapp.svg" alt="">
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/social/viber.svg" alt="">
+                  <span>Viber</span>
+                </a>
+              </li>
+              <li class="drop-menu-item">
+                <a href="#">
+                  <span>+37 (25) 7175124</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-nav-item">
+          <li class="header-nav-item drop-menu">
+            <div class="drop-menu-title">
+              <img src="./assets/img/user.svg" alt="">
+              <span>Личный кабинет</span>
+            </div>
+            <ul class="drop-menu-wrapper">
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/user.svg" alt="">
+                  <span>User Name</span>
+                </a>
+              </li>
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/user.svg" alt="">
+                  <span>Личный кабинет покупателя</span>
+                </a>
+              </li>
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/user.svg" alt="">
+                  <span>Личный кабинет перевозчика</span>
+                </a>
+              </li>
+              <li class="drop-menu-item">
+                <a href="#">
+                  <img src="./assets/img/exit.svg" alt="">
+                  <span>Выход</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="ticket-order box">
-      <h1 class="ticket-order-title">
+    <aside class="ticket-order">
+      <div class="ticket-order-content">
+        <button class="ticket-order-close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg>
+        </button>
+
+        <section class="bus-choose-seats">
+          <span class="bus-choose-seats-title">Выберите место / места</span>
+
+          <div class="bus-seats">
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">2</li>
+              <li class="bus-seats-item seat-2">1</li>
+              <li class="bus-seats-item seat-4 busy">4</li>
+              <li class="bus-seats-item seat-5">3</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">7</li>
+              <li class="bus-seats-item seat-2 busy">8</li>
+              <li class="bus-seats-item seat-4 busy">5</li>
+              <li class="bus-seats-item seat-5">6</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">11</li>
+              <li class="bus-seats-item seat-2">12</li>
+              <li class="bus-seats-item seat-4">9</li>
+              <li class="bus-seats-item seat-5 busy">10</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1 busy">15</li>
+              <li class="bus-seats-item seat-2 busy">16</li>
+              <li class="bus-seats-item seat-4">13</li>
+              <li class="bus-seats-item seat-5 busy">14</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">19</li>
+              <li class="bus-seats-item seat-2">20</li>
+              <li class="bus-seats-item seat-4">17</li>
+              <li class="bus-seats-item seat-5">18</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">23</li>
+              <li class="bus-seats-item seat-2">24</li>
+              <li class="bus-seats-item seat-4">21</li>
+              <li class="bus-seats-item seat-5">22</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-4">25</li>
+              <li class="bus-seats-item seat-5">26</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-4">29</li>
+              <li class="bus-seats-item seat-5">30</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">35</li>
+              <li class="bus-seats-item seat-2">36</li>
+              <li class="bus-seats-item seat-4 busy">33</li>
+              <li class="bus-seats-item seat-5">34</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">39</li>
+              <li class="bus-seats-item seat-2">40</li>
+              <li class="bus-seats-item seat-4">37</li>
+              <li class="bus-seats-item seat-5">38</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">43</li>
+              <li class="bus-seats-item seat-2">44</li>
+              <li class="bus-seats-item seat-4">41</li>
+              <li class="bus-seats-item seat-5">42</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">47</li>
+              <li class="bus-seats-item seat-2 busy">48</li>
+              <li class="bus-seats-item seat-4 busy">45</li>
+              <li class="bus-seats-item seat-5">46</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item seat-1">51</li>
+              <li class="bus-seats-item seat-2">52</li>
+              <li class="bus-seats-item seat-4">49</li>
+              <li class="bus-seats-item seat-5">50</li>
+            </ul>
+
+            <ul class="bus-seats-col">
+              <li class="bus-seats-item busy">53</li>
+              <li class="bus-seats-item busy">54</li>
+              <li class="bus-seats-item busy">55</li>
+              <li class="bus-seats-item busy">56</li>
+              <li class="bus-seats-item busy">57</li>
+            </ul>
+          </div>
+
+          <button class="button-1 bus-choose-seat">Выбрать место</button>
+        </section>
+
+        <section class="enter-passenger">
+          <div class="ticket">
+            <div class="ticket-title ticket-item">
+              <div class="ticket-time">
+                14:57,
+                <span class="ticket-date">03.04</span>
+                <span class="ticket-station">Минск</span>
+              </div>
+              <span class="ticket-travel-time">3ч 17мин</span>
+              <div class="ticket-time">
+                14:57
+                <span class="ticket-date">03.04</span>
+                <span class="ticket-station">Гомель</span>
+              </div>
+            </div>
+
+            <div class="ticket-description ticket-item">
+              <div class="ticket-number-seat">
+                <span class="ticket-number-seat-title">Вагон</span>
+                <span class="ticket-number-seat-content">№1 (сидячий)</span>
+              </div>
+              <div class="ticket-number-seat">
+                <span class="ticket-number-seat-title">Места</span>
+                <span class="ticket-number-seat-content">№1 13</span>
+              </div>
+            </div>
+
+            <div class="ticket-price ticket-item">
+              <span class="ticket-price-title">Сумма заказа</span>
+              <span class="ticket-price-content">26,64 byn</span>
+            </div>
+          </div>
+
+          <div class="passenger-data">
+            <div class="passenger-title">
+              <span>Пассажир №1</span>
+              <button>Изменить</button>
+            </div>
+
+            <div class="passenger-content">
+              <span class="passenger-name">
+                Lorem Ipsum Lorem
+              </span>
+              <span class="passenger-text">Паспорт гаржданина Российской Федерации, 23532523, +803343535343</span>
+            </div>
+          </div>
+
+          <form action="post" class="ticket-access">
+            <div class="ticket-access-content">
+              <input type="checkbox" name="" id="">
+              <p>Потверждаю, что с <a href="#">условиями оферты, правилами и особенностями оформления электронного
+                  проездного документа</a>, ознакомлен
+              </p>
+            </div>
+
+            <button type="button" class="button-1 ticket-access-button">Оформить заказ</button>
+          </form>
+        </section>
+      </div>
+    </aside>
+
+    <section class="ticket-search box">
+      <h1 class="ticket-search-title">
         <span>Купить билет на автобус</span>
         <span>Быстро легко надежно</span>
       </h1>
       <form action="post" class="main-form">
         <label class="search-city">
-          <input type="search">
+          <input type="text" required>
           <span>Откуда</span>
         </label>
 
@@ -49,28 +277,13 @@
         </button>
 
         <label class="search-city">
-          <input type="search">
+          <input type="text" required>
           <span>Куда</span>
         </label>
 
         <label class="date-trip active">
           <input type="date">
           <span>Дата</span>
-        </label>
-
-        <label class="passengers-type">
-          <input type="text">
-          <span>Пассажиры</span>
-          <div class="passengers-type-window">
-            <div class="passengers-type-item">
-              <span></span>
-              <div class="passengers-type-wrapper">
-                <button><img src="" alt=""></button>
-                <span></span>
-                <button><img src="" alt=""></button>
-              </div>
-            </div>
-          </div>
         </label>
 
         <button type="button" class="button-1 order-button">
@@ -313,22 +526,22 @@
           <span>Отзывы пассажиров о перевозчиках</span>
         </div>
 
-        <div class="slider">
-          <button class="slider-button prev">
+        <div class="swiper comments">
+          <button class="swiper-button-prev">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
               <path
                 d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
             </svg>
           </button>
 
-          <div class="slider-wrapper">
+          <div class="swiper-wrapper">
 
-            <section class="slider-item comment">
-              <img class="slider-comment-img" src="./assets/img/user-comment.svg" alt="">
+            <section class="swiper-slide comment">
+              <img class="swiper-comment-img" src="./assets/img/user-comment.svg" alt="">
 
-              <div class="slider-comment-content">
-                <span class="slider-comment-username">Lorem Ipsum</span>
-                <p class="slider-comment-text">
+              <div class="swiper-comment-content">
+                <span class="swiper-comment-username">Lorem 1</span>
+                <p class="swiper-comment-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum odio nesciunt distinctio, nostrum
                   consequatur, incidunt repudiandae magni repellendus ea aliquid exercitationem qui soluta beatae velit
                   iure eius magnam alias tempore!
@@ -336,12 +549,38 @@
               </div>
             </section>
 
-            <section class="slider-item comment">
-              <img class="slider-comment-img" src="./assets/img/user-comment.svg" alt="">
+            <section class="swiper-slide comment">
+              <img class="swiper-comment-img" src="./assets/img/user-comment.svg" alt="">
 
-              <div class="slider-comment-content">
-                <span class="slider-comment-username">Lorem Ipsum</span>
-                <p class="slider-comment-text">
+              <div class="swiper-comment-content">
+                <span class="swiper-comment-username">Lorem 2</span>
+                <p class="swiper-comment-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum odio nesciunt distinctio, nostrum
+                  consequatur, incidunt repudiandae magni repellendus ea aliquid exercitationem qui soluta beatae velit
+                  iure eius magnam alias tempore!
+                </p>
+              </div>
+            </section>
+
+            <section class="swiper-slide comment">
+              <img class="swiper-comment-img" src="./assets/img/user-comment.svg" alt="">
+
+              <div class="swiper-comment-content">
+                <span class="swiper-comment-username">Lorem 3</span>
+                <p class="swiper-comment-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum odio nesciunt distinctio, nostrum
+                  consequatur, incidunt repudiandae magni repellendus ea aliquid exercitationem qui soluta beatae velit
+                  iure eius magnam alias tempore!
+                </p>
+              </div>
+            </section>
+
+            <section class="swiper-slide comment">
+              <img class="swiper-comment-img" src="./assets/img/user-comment.svg" alt="">
+
+              <div class="swiper-comment-content">
+                <span class="swiper-comment-username">Lorem 4</span>
+                <p class="swiper-comment-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum odio nesciunt distinctio, nostrum
                   consequatur, incidunt repudiandae magni repellendus ea aliquid exercitationem qui soluta beatae velit
                   iure eius magnam alias tempore!
@@ -351,7 +590,7 @@
 
           </div>
 
-          <button class="slider-button next">
+          <button class="swiper-button-next">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
               <path
                 d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
@@ -406,6 +645,10 @@
       </div>
     </div>
 
+    <div class="message">
+      <p>Заказ добавлен в корзину.</p>
+    </div>
+
   </main>
 
   <footer class="box">
@@ -436,6 +679,75 @@
       </a>
     </address>
   </footer>
+
+  <script src="./assets/js/app.js"></script>
+  <script>
+    const header = new Header(
+      document.querySelector("header"),
+      document.querySelector(".ticket-search")
+    );
+
+    header.start();
+  </script>
+  <script>
+    const modalWindow = new ModalWindow({
+      modalWindow: document.querySelector(".ticket-order"),
+      buttonOpen: [...document.querySelectorAll(".offers-item-button")],
+      buttonClose: document.querySelector(".ticket-order-close"),
+      display: "flex",
+      style: {
+        open: {
+          maxWidth: '100%',
+          maxHeight: '100%'
+        },
+        close: {
+          maxWidth: '0',
+          maxHeight: '0'
+        }
+      }
+    })
+  </script>
+
+  <script>
+    const busSeatsItems = [...document.querySelectorAll('.bus-seats-item')];
+
+    busSeatsItems.forEach(seat => {
+      seat.addEventListener("click", () => {
+        seat.classList.toggle("active");
+      })
+    })
+  </script>
+
+  <script>
+    const ticketOrder = document.querySelector('.ticket-order');
+    const busChooseSeats = document.querySelector('.bus-choose-seats');
+    const busChooseSeatButton = document.querySelector('.bus-choose-seat');
+    const enterPassenger = document.querySelector('.enter-passenger');
+    const ticketAccessButton = document.querySelector('.ticket-access-button');
+    const message = document.querySelector('.message');
+
+    busChooseSeatButton.addEventListener("click", () => {
+      busChooseSeats.style.display = "none";
+      enterPassenger.style.display = "flex";
+    })
+    ticketAccessButton.addEventListener("click", () => {
+      Object.assign(ticketOrder.style, {
+        maxWidth: '0',
+        maxHeight: '0'
+      });
+
+      busChooseSeats.style.display = "block";
+      enterPassenger.style.display = "none";
+
+      setTimeout(() => {
+        message.style.transform = "translateY(0)";
+
+        setTimeout(() => {
+          message.style.transform = "translateY(calc(100% + 20px))"
+        }, 2000)
+      }, 400);
+    })
+  </script>
 </body>
 
 </html>

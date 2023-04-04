@@ -43,17 +43,26 @@ class ModalWindow {
     this.buttonClose = props.buttonClose;
     this.display = props.display === "" ? "block" : props.display;
     this.style = props.style;
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
 
     console.log(props);
 
     if (Array.isArray(this.buttonOpen)) {
       this.buttonOpen.forEach((button) =>
-        button.addEventListener("click", this.open.bind(this))
+        button.addEventListener("click", this.open)
       );
     } else {
-      this.buttonOpen.addEventListener("click", this.open.bind(this));
+      this.buttonOpen.addEventListener("click", this.open);
     }
-    this.buttonClose.addEventListener("click", this.close.bind(this));
+
+    if (Array.isArray(this.buttonClose)) {
+      this.buttonClose.forEach((button) => {
+        button.addEventListener("click", this.close);
+      });
+    } else {
+      this.buttonClose.addEventListener("click", this.close);
+    }
   }
 
   close() {
@@ -69,24 +78,48 @@ class DropMenu {
   constructor(props) {
     this.header = props.header;
     this.menu = props.menu;
-    this.switch = this.switch.bind(this);
+    this.select = props.select === "" || props.select === false ? false : true;
+    this.toggleShow = this.toggleShow.bind(this);
+    this.switchSelect = this.switchSelect.bind(this);
 
     if (Array.isArray(this.header)) {
-      this.header.forEach((item, id) => {
-        item.addEventListener("click", () => {
-          this.switch(id, true);
+      this.header.forEach((headerItem, id) => {
+        headerItem.addEventListener("click", () => {
+          this.toggleShow(id, true);
         });
+
+        if (this.select === true) {
+          const selectItems = this.menu[id].querySelectorAll("li");
+
+          selectItems.forEach((item) => {
+            item.addEventListener("click", () => {
+              this.switchSelect(item, headerItem, id);
+            });
+          });
+        }
       });
     } else {
-      this.header.addEventListener("click", this.switch);
+      this.header.addEventListener("click", this.toggleShow);
+
+      if (this.select === true) {
+        const selectItems = this.menu.querySelectorAll("li");
+
+        selectItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            this.switchSelect(item, this.header, id);
+          });
+        });
+      }
     }
   }
 
-  switch(id = 0, array = false) {
+  toggleShow(id = 0, array = false) {
     let menuHeight = 0;
 
     if (array === true) {
       menuHeight = parseInt(this.menu[id].style.maxHeight);
+
+      this.menu[id].parentElement.classList.toggle("active");
 
       if (isNaN(menuHeight) || menuHeight === 0) {
         this.menu[id].style.maxHeight = this.menu[id].scrollHeight + "px";
@@ -96,6 +129,8 @@ class DropMenu {
     } else {
       menuHeight = parseInt(this.menu.maxHeight);
 
+      this.menu.parentElement.classList.toggle("active");
+
       if (isNaN(menuHeight) || menuHeight === 0) {
         this.menu.style.maxHeight = this.menu.scrollHeight + "px";
       } else {
@@ -103,9 +138,18 @@ class DropMenu {
       }
     }
   }
+
+  switchSelect(item, headerItem, id) {
+    const selectValue = headerItem.querySelector("span");
+
+    selectValue.innerHTML = item.innerHTML;
+
+    this.toggleShow(id, true);
+  }
 }
 
 const headerDropMenu = new DropMenu({
   header: [...document.querySelectorAll(".drop-menu-title")],
   menu: [...document.querySelectorAll(".drop-menu-wrapper")],
+  select: false,
 });

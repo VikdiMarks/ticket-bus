@@ -334,7 +334,7 @@ header.active .drop-menu-wrapper {
   display: block;
   margin-bottom: 30px;
 
-  color: #000000;
+  color: rgb(83, 133, 105);
   font-size: 18px;
   font-weight: 500;
 }
@@ -1229,6 +1229,9 @@ a.address-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
 
   top: 50%;
   left: 50%;
@@ -1236,22 +1239,49 @@ a.address-item {
   backdrop-filter: blur(2px);
 
   transform: translateX(-50%) translateY(-50%);
+
+  transition: all .3s ease;
 }
 
-.add-passegers-wrapper {
+.add-passegers-content {
   width: 50%;
   height: 70%;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   row-gap: 30px;
+  position: relative;
 
   border-radius: 10px;
   border: 2px solid rgb(83, 133, 105);
   border-style: dashed;
   background-color: rgba(160, 193, 174, .7);
+}
+
+.add-passegers-title {
+  color: rgb(83, 133, 105);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.window-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+
+  fill: rgb(83, 133, 105);
+
+  top: 20px;
+  right: 20px;
+}
+
+.add-passegers-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  row-gap: 30px;
 }
 
 .passegers-gender-main {
@@ -1333,6 +1363,25 @@ a.address-item {
   transform: translateY(12.5%) translateX(50%);
 }
 
+.add-passegers-form {
+  padding-right: 20px;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  left: 0;
+  bottom: 0;
+
+  background-color: rgb(201, 218, 208);
+}
+
+.add-passegers-form>button {
+  padding: 15px 20px;
+}
+
 
 /* DROPDOWN */
 .dropdown {
@@ -1350,9 +1399,11 @@ a.address-item {
   border-radius: 5px;
   background-color: rgb(83, 133, 105);
   color: #FFFFFF;
+
+  transition: all .3s ease;
 }
 
-.dropdown-select.active {
+.dropdown.active .dropdown-select {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -1362,11 +1413,19 @@ a.address-item {
   height: 15px;
 
   fill: #FFFFFF;
+
+  transition: transform .3s ease;
+}
+
+.dropdown.active .dropdown-select svg {
+  transform: rotate(180deg);
 }
 
 .dropdown-menu {
   width: 100%;
   position: absolute;
+  max-height: 0;
+  overflow: hidden;
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -1405,13 +1464,14 @@ a.address-item {
   padding: 10px 17px;
 
   font-size: 16px;
+  font-weight: 400;
   color: #FFFFFF;
   background-color: rgb(83, 133, 105);
   border-radius: 5px;
 }
 
 .add-passegers input[type="text"]::placeholder {
-  color: #FFFFFF;
+  color: rgb(201, 218, 208);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
 }

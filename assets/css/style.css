@@ -1056,6 +1056,15 @@ a.address-item {
 }
 
 /* ACCOUNT MAIN */
+#basket,
+#passegers {
+  display: none;
+}
+
+#orders {
+  display: block;
+}
+
 .account-main {
   width: 60%;
   height: 25vw;
@@ -1090,7 +1099,15 @@ a.address-item {
 }
 
 .orders-content thead {
-  background-color: rgba(103, 162, 129, 0.7);
+  background-color: rgba(83, 133, 105, .7)
+}
+
+.orders-content tbody tr:nth-child(2n+1) {
+  background-color: rgba(83, 133, 105, .4)
+}
+
+.orders-content tbody tr:nth-child(2n+2) {
+  background-color: rgba(83, 133, 105, .7)
 }
 
 .orders-content th,
@@ -1149,7 +1166,7 @@ a.address-item {
 
   border-radius: 10px;
   background-color: rgb(83, 133, 105);
-  box-shadow: 0 0 5px 5px rgba(83, 133, 105, .3);
+  box-shadow: 0 0 10px 2px rgba(83, 133, 105, .7);
 }
 
 .basket-item-stations {
@@ -1201,17 +1218,18 @@ a.address-item {
 }
 
 .passegers-item {
-  width: 40%;
-  height: 100px;
+  width: 48%;
   position: relative;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  row-gap: 20px;
 
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 5px;
   background-color: rgb(83, 133, 105);
+  box-shadow: 0 0 10px 2px rgba(83, 133, 105, .7);
 }
 
 .add-passegers-button {

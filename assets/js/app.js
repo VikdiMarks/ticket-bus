@@ -46,8 +46,6 @@ class ModalWindow {
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
 
-    console.log(props);
-
     if (Array.isArray(this.buttonOpen)) {
       this.buttonOpen.forEach((button) =>
         button.addEventListener("click", this.open)

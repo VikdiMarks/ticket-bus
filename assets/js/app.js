@@ -65,10 +65,12 @@ class ModalWindow {
 
   close() {
     Object.assign(this.modalWindow.style, this.style.close);
+    document.querySelector("body").style.overflow = "auto";
   }
 
   open() {
     Object.assign(this.modalWindow.style, this.style.open);
+    document.querySelector("body").style.overflow = "hidden";
   }
 }
 
